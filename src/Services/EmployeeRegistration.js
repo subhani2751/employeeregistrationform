@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const apiClient=axios.create({
-    baseURL : 'http://localhost:8080/',
+    baseURL : 'api/',
     headers : {
         "Content-Type" : "application/json",
     }
@@ -9,16 +9,16 @@ const apiClient=axios.create({
 
 export default{
     async postemployeeDetails(){
-      return await apiClient.post('api/ApiEmployee/post');
+      return await apiClient.post('ApiEmployee/post');
     },
     async getemployeeDetails(){
-        return  await apiClient.get('api/ApiEmployee/GetAllEmployees');
+        return  await apiClient.get('ApiEmployee/GetAllEmployees');
     },
     async Deleteemployee(){
-        return  await apiClient.get('api/ApiEmployee/Delete');
+        return  await apiClient.get('ApiEmployee/Delete');
     },
     async updateemployee(){
-        return await apiClient.put('api/ApiEmployee/Update');
+        return await apiClient.put('ApiEmployee/Update');
     },
     async ImportEmployees(){
         return await apiClient.post();
